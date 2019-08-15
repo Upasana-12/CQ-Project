@@ -1,0 +1,53 @@
+<!-- <header class="header">
+  <div class="logo">
+    cq
+  </div>
+  <div class="toggle-btn">
+    <a href="#" id="main-header"> <i class="fa fa-windows"></i></a>
+  </div>
+  <div class="vacant">
+
+  </div>
+  <div class="user-type">
+    admin
+  </div>
+  <div class="user-type">
+    superadmin
+  </div>
+  <div class="image">
+    <img src="dp.png" id="image">
+  </div>
+</header> -->
+
+<nav id="navbar">
+
+        <div class="container-fluid">
+            <div id="leftpanel" style="float:left;">
+                 <a id="cq" class="navbar-brand" href="#">cq</a>
+
+
+                    <a onclick="openbar()" id="openbox">
+                        <span class="glyphicon glyphicon-th-large"></span>
+                    </a>
+                    <span class="label label-success" id="leftadmin">
+                        Admin
+                    </span>
+            </div>
+
+            <div id="rightpanel" style="float:right;">
+
+                <img src="/uploads/<%= obj.photoname %>" id="dpimage" style="height:40px;width: 40px;float:right;">
+
+
+             <!--   <span class="label label-success" id="rightadmin" style="float:right;">
+                    Admin
+                </span> -->
+
+                <span class="label label-warning" id="sadmin" style="float:right;">
+                    <%= obj.name %>
+                </span>
+
+            </div>
+        </div>
+
+</nav>

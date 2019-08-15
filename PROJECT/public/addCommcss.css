@@ -1,0 +1,12 @@
+.community-head-btn {
+    background-color: rgba(255,255,255,0.1);
+    color: #fff;
+    margin-left: 100px;
+    border: 1px solid #fff;
+}
+
+.community-header-top {
+    width: 100%;
+    background-image: linear-gradient(to bottom, #4ba2b7, #42a6be, #38aac6, #29adcd, #0fb1d5);
+    height: 180px;
+}

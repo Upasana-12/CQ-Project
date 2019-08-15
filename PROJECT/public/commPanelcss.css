@@ -1,0 +1,35 @@
+.community-head-btn {
+    background-color: rgba(255,255,255,0.1);
+    color: #fff;
+    margin-left: 100px;
+    border: 1px solid #fff;
+}
+
+.community-header-top {
+    width: 100%;
+    background-image: linear-gradient(to bottom, #4ba2b7, #42a6be, #38aac6, #29adcd, #0fb1d5);
+    height: 180px;
+}
+
+.community-panel-main-div {
+    border: 0;
+    border-radius: 0;
+    margin-top: 50px;
+}
+
+.allSidesSoft {
+    box-shadow: 0 3px 10px 0 rgba(115,143,147,.3);
+}
+
+.community-panel-heading {
+    border-radius: 0;
+    background-image: linear-gradient(to top, #4ba2b7, #42a6be, #38aac6, #29adcd, #0fb1d5);
+}
+
+.community-panel-btn {
+    color: #fff;
+    background: transparent;
+    border-color: #fff;
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+}

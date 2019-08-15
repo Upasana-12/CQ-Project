@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>HOME PAGE</title>
+	  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">		
+	<link rel="stylesheet" href="editHomecss.css" type="text/css">
+	<link rel="stylesheet" href="uHeadercss.css" type="text/css">
+	<link rel="stylesheet" href="uSidebarcss.css" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	
+</head>
+<body class="body">	
+	<% include partials/uHeader %>
+	<div id="viewscreen">
+	 <% include partials/uSidebar %>
+		<div id="rightview">
+<div class='content-div'>
+        <div class="container">
+            <div class="card allSidesSoft" style="background:rgb(249, 249, 249)">
+              <div class="card-body">
+
+              
+                <div class="d-flex pc">
+                    <div class="image-container">
+                        <img src="/uploads/<%= obj.photoname %>" id="user-profile-image" style="width: 150px; height: 150px" class="img-thumbnail allSidesSoft" />
+                    </div>
+                </div>
+              
+                  <div class="form-group">
+                    <button type="button" class="btn btn-primary pull-right" style="margin-right:15px" id="edit">EDIT</button>
+                  </div>
+
+     
+              
+
+                <br />
+                <br />
+            
+                <div class="col-sm-6">
+                  <div class="panel panel-default allSidesSoft panel-main-div">
+                    <div class="panel-heading">Email</div>
+                    <div class="panel-body"><%= obj.email %></div>
+                  </div>
+                </div>
+            
+
+            
+                <div class="col-sm-6">
+                  <div class="panel panel-default allSidesSoft panel-main-div">
+                    <div class="panel-heading">Gender</div>
+                    <div class="panel-body" style="text-transform: capitalize;"><%= obj.gender %></div>
+                  </div>
+                </div>
+            
+
+            
+                <div class="col-sm-6">
+                  <div class="panel panel-default allSidesSoft panel-main-div">
+                    <div class="panel-heading">Name</div>
+                    <div class="panel-body"><%= obj.name %></div>
+                  </div>
+                </div>
+            
+
+            
+                <div class="col-sm-6">
+                  <div class="panel panel-default allSidesSoft panel-main-div">
+                    <div class="panel-heading">City</div>
+                    <div class="panel-body"><%= obj.city %></div>
+                  </div>
+                </div>
+            
+
+            
+                <div class="col-sm-6">
+                  <div class="panel panel-default allSidesSoft panel-main-div">
+                    <div class="panel-heading">D.O.B</div>
+                    <div class="panel-body null-link" id="dobtext"><%= obj.dob %></div>
+                  </div>
+                </div>
+            
+
+            
+                <div class="col-sm-6">
+                  <div class="panel panel-default allSidesSoft panel-main-div">
+                    <div class="panel-heading">Phone</div>
+                    <div class="panel-body"><%= obj.phone %></div>
+                  </div>
+                </div>
+            
+
+            
+              
+            
+
+            
+
+            
+
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+</div>
+</body>
+<script src="uHeaderjs.js" type="text/javascript"></script>
+<script src="uSidebarjs.js" type="text/javascript"></script>
+<script>
+	var edit_btn = document.getElementById("edit");
+	edit_btn.onclick = ()=>
+	{
+		window.location="/ueditProfile"
+	}
+</script>
+</html>
+		

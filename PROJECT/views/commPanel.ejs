@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>HOME PAGE</title>
+	  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">		
+	<link rel="stylesheet" href="commPanelcss.css" type="text/css">
+	<link rel="stylesheet" href="userHeadercss.css" type="text/css">
+	<link rel="stylesheet" href="userSidebarcss.css" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	
+</head>
+<body>	
+	<% include partials/userHeader %>
+	
+	 <% include partials/userSidebar %>
+	 
+
+			   
+			   
+<!--====================================================================-->
+
+<div class="community-header-top" style="height:50px;padding-top:6px;">
+
+    <a class="btn community-head-btn active" href="/groups">
+      <i class="fa fa-users"></i>
+    </a>
+    <a class="btn community-head-btn" style="margin-left:10px" href="/community/list">
+      <i class="fa fa-search"></i>
+    </a>
+
+</div>
+
+<!--====================================================================-->  
+
+
+<div class="container" style="padding:0">
+<div class="col-sm-12">
+  <div class="panel panel-default allSidesSoft community-panel-main-div">
+    <div class="panel-heading community-panel-heading">
+      
+        <p style="color:white;margin-top:6px;font-weight:bold">My Communities</p>
+        <button type="button" id="create" class="btn btn-info community-panel-btn" style="float:right;margin:-35px 5px 0 0">Create</button>
+      
+    </div>
+    <div class="panel-body" style="padding-bottom:0">
+      
+        <div id="can-create-community">
+          <!--My Community-->
+        </div>
+      
+    </div>
+
+
+
+  </div>
+</div>
+</div>
+<br />
+<!--====================================================================-->
+
+
+
+
+</body>
+<script>
+var create_btn = document.getElementById("create")
+create_btn.onclick = ()=>
+{
+	window.location = "/addCommunity"
+}
+</script>
+<script src="userHeaderjs.js" type="text/javascript"></script>
+<script src="userSidebarjs.js" type="text/javascript"></script>
+
+</html>			   

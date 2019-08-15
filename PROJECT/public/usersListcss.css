@@ -1,0 +1,72 @@
+.listhead
+{
+	    display: flex;
+    /* float: left; */
+    margin-top: 15px;
+    /* margin-left: 55px;*/
+}
+.lab
+{
+	order: 1;
+    flex: 3;
+    font-size: 26px;
+    font-family: fantasy;
+}
+  .empty {
+    order: 2;
+    flex: 5;
+	width : 635px;
+  }
+.status {
+	order: 3;
+	flex :1;
+	/*background-color: black;*/
+}	
+.utype {
+	order: 4;
+	flex: 1;
+	/*background-color: black;*/
+}
+  body
+  {
+	  padding : 0;
+	  margin : 0;
+	 font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	color : #333439;
+	line-height: 1.42857143;
+  }
+  
+  #listbody
+  {
+	width: 75%;
+    margin-left: 55px;
+    float: left;
+    margin-top: 20px;
+  }
+  
+  #stat
+  {
+		width: 117px;
+    background-color: #1b1818c9;
+    color: white;
+    height: 30px;  
+  }
+  
+  #urole
+  {
+		width: 117px;
+    background-color: #1b1818c9;
+    color: white;
+    height: 30px;  
+  }
+  
+  #dynamic
+  {
+	padding: 5px 10px;
+	font-size: 12px;
+	line-height: 1.5;
+	/* margin-top: 35px; */
+	background-color: #524F4F;
+	color: #fff;
+	border : 1px solid grey;	  
+  }

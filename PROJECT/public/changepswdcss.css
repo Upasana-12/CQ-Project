@@ -1,0 +1,43 @@
+
+body{
+	margin: 0;
+	padding: 0;
+	line-height: 1.42857143;
+	overflow-y: hidden; 
+}
+
+
+.l1
+{
+padding-right: 160px;
+    font-size: 20px;
+}
+.ip
+{
+	width: 300px;
+    height: 32px;
+}
+#submit
+{
+	    padding-top: 4px;
+    font-size: 18px;
+    color: black;
+    border-radius: 3px;
+    height: 30px;
+    width: 102px;
+    background-color: #98ce98;
+    padding-right: 6px;
+	    margin-top: 25px;
+}
+#cbox
+{
+	    height: 300px;
+    float: left;
+    width: 390px;
+    padding-top: 9px;
+    /* padding-left: 216px; */
+    border: 1px solid #b3a5a5;
+    margin-left: 350px;
+    margin-top: 45px;
+    box-shadow: 2px 2px 16px 0px grey;;
+}

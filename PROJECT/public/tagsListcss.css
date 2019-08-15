@@ -1,0 +1,24 @@
+  body
+  {
+	  padding : 0;
+	  margin : 0;
+	 font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	color : #333439;
+	line-height: 1.42857143;
+  }
+  
+ 
+ 
+ #tagbody
+ {
+    width: 78%;
+    margin-left: 45px;
+    float: left;
+    margin-top: -10px; 
+ }
+ 
+ #la
+ {
+	font-size: 30px;
+    font-family: fantasy; 
+ }

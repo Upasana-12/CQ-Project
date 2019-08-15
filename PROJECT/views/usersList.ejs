@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>USERS LIST</title>
+	  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="usersListcss.css" type="text/css">
+	<link rel="stylesheet" href="headercss.css" type="text/css">
+	<link rel="stylesheet" href="sidebarcss.css" type="text/css">
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<link rel="stylesheet" href="trumbowyg.css" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script src="trumbowyg.min.js"></script>
+
+</head>	
+<body class="body">
+	
+	<% include partials/header %>
+	<div id="viewscreen">
+	
+	 <% include partials/sidebar %>
+		<div id="rightview">
+	 
+	 
+<div class="container">
+<div id="page-content-wrapper" style="padding:0;margin-top:10px"> <!--Margin Top is new-->
+         <div class="container-fluid page-content-div" style="padding:0">
+            <div class="row">
+               <div class="col-lg-12 scoll-possible" style="padding:0">		 
+	 
+	 
+	<div class="listhead">
+		<div class="lab">User List</div>
+		<div class="empty"></div>
+		<div class="status">
+			<select id="stat" placeholder="All">
+				<option>All</option>
+				<option>Pending</option>
+				<option>Confirmed</option>
+			</select>
+		</div>	
+		<div class="utype">
+			<select id="urole" placeholder="All">
+				<option>All</option>
+				<option>Admin</option>
+				<option>User</option>
+				<option>Community Builder</option>
+			</select>
+		</div>
+	</div>
+	</br>
+	
+	
+	<div class="table-wrapper">
+	
+		<table id="data-table" class="table table-striped table-bordered nowrap" style="width:100%">
+		<thead>
+            <tr>
+                <th>Username/Email</th>
+                <th>Phone</th>
+                <th>City</th>
+                <th>Status</th>
+                <th>Role</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+		<tbody id="data">
+			
+		</tbody>
+		</table>
+	</div>
+	
+	
+	  <div class="modal fade" id="myModal" role="dialog" style="z-index:9999" data-keyboard="false" data-backdrop="static">
+		<div class="modal-dialog">
+		
+		      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">UPDATE</h4>
+        </div>
+        <div class="modal-body">
+        <div class="form-horizontal">
+          <div class="form-group">
+            <div class="col-lg-5 col-lg-offset-3" style="width:50%">
+              <input type="text" name="_id" style="text-align:center;display:none;" class="form-control" id="_id" readonly>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2">Username:</label>
+            <div class="col-sm-10">
+              <input type="text" name="username" class="form-control" id="username" placeholder="Username">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2">Phone:</label>
+            <div class="col-sm-10">
+              <input type="text" name="phone" class="form-control" id="phone" placeholder="Phone" maxlength="15">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2">City:</label>
+            <div class="col-sm-10">
+              <input type="text" name="city" class="form-control" id="city" placeholder="City">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2">Status:</label>
+            <div class="col-sm-10">
+              <select class="form-control" id="status" name="status">
+                  <option name="pending" >Pending</option>
+                  <option name="confirmed" >Confirmed</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2">Role:</label>
+            <div class="col-sm-10">
+              <select class="form-control" id="role" name="role" placeholder="Role">
+                <option name="user">User</option>
+                  <option name="admin" >Community Builder</option>
+                <option name="admin" >Admin</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button class="btn btn-default" id="editsubmit" data-dismiss="modal">Update</button>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+    </div>
+		
+<div class="modal fade" id="yellowModal" tabindex="-1" style="z-index:9999" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" id="title"></h4>
+        
+      </div>
+      <div class="modal-body">
+        <p id="deluser"></p>
+     
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal" id="yellowyes">Yes</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--
+<div class="modal fade" id="greenModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Activate User?</h4>
+        
+      </div>
+      <div class="modal-body">
+        <p id="activate-user"></p>
+     
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal" id="yellowyes">Yes</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+
+
+<div class="modal fade" id="Mail-modal" role="dialog" style="z-index:9999">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" id="mailheader">Send Reminder Mail</h4>
+        </div>
+        <div class="modal-body">
+        <!------------------------------------------------------------------------------------>
+        <div class="form-horizontal"> <!-- form -->
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="email">To:</label>
+            <div class="col-sm-10">
+              <input type="email" name="username" class="form-control" id="emailPop" readonly>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2">Subject:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Title">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-12"><!--Body-->
+              <textarea type="text" class="form-control" name="body" id="body"></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button class="btn btn-default" data-dismiss="modal" id="mailbutton" style="float:right">Send</button>
+            </div>
+          </div>
+        </div> <!-- form -->
+        <!---------------------------------------------------------------------------------->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+</div>	
+</div>
+</div>	
+</body>	
+
+<script src="headerjs.js" type="text/javascript"></script>
+<script src="sidebarjs.js" type="text/javascript"></script>
+<script src="usersListjs.js"></script>
+</html>
